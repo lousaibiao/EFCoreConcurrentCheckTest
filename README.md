@@ -26,3 +26,9 @@ entity.Property(e => e.RowVersion)
 string connStr = Environment.GetEnvironmentVariable("MYSQLCONNSTR");
 ```
 
+7. 生成DbContext的方法
+
+```bash
+dotnet ef dbcontext scaffold "连接字符串，server=xxx;password=xxx等" "Pomelo.EntityFrameworkCore.MySql" -t test1 -t test2 -o Model -c JhwContext -f
+```
+
