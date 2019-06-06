@@ -1,5 +1,8 @@
 # EFCoreConcurrentCheckTest
 
+本文主要测试[文档](https://docs.microsoft.com/en-us/ef/core/saving/concurrency)上的并发冲突。
+先确保能捕获到异常，然后结合[Polly](https://github.com/App-vNext/Polly)库，可以对关键的代码做一些重试的操作。
+
 大致分以下几步：
 1. 数据库表增加一个timestamp字段，取名RowVersion，对应DbContext里面的model就是DateTime。
 2. 配置这个字段在Add或者Update的时候会自己赋值。数据库修改方式[链接](https://blog.csdn.net/w405722907/article/details/85768660)
