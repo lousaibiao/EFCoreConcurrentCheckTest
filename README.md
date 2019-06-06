@@ -1,6 +1,6 @@
 # EFCoreConcurrentCheckTest
 
-大致分3步：
+大致分以下几步：
 1. 数据库表增加一个timestamp字段，取名RowVersion，对应DbContext里面的model就是DateTime。
 2. 配置这个字段在Add或者Update的时候会自己赋值。数据库修改方式[链接](https://blog.csdn.net/w405722907/article/details/85768660)
 3. 给这个RowVersion字段增加ConcurrentCheck，分两种，效果是一样的。
